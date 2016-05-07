@@ -46,7 +46,9 @@
     <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
         <ion-side-menu-content>
             <ion-nav-bar class="bar-stable">
-                <ion-nav-back-button></ion-nav-back-button>
+              <ion-nav-back-button class="button-clear">
+                <i class="ion-arrow-left-c"></i> Back
+              </ion-nav-back-button>
                 <ion-nav-buttons side="right">
                     <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
                 </ion-nav-buttons>
@@ -59,6 +61,9 @@
             </ion-header-bar>
             <ion-content padding="false" class="side-menu-right has-header">
                 <ion-list data-componentid="list1">
+                    <ion-item ui-sref="tabsController.map" menu-close="" data-componentid="list-item1">Map</ion-item>
+                    <ion-item ui-sref="tabsController.newRoute" menu-close="" data-componentid="list-item1">New route</ion-item>
+                    <ion-item ui-sref="tabsController.store" menu-close="" data-componentid="list-item1">Store</ion-item>
                     <ion-item ui-sref="profile" menu-close="" data-componentid="list-item1">My profile</ion-item>
                 </ion-list>
             </ion-content>

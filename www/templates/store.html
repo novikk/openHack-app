@@ -1,24 +1,13 @@
 <ion-view title="Store" id="page4">
     <ion-content padding="true" class="has-header">
-        <div>
+        <div ng-repeat="p in products">
             <div style="margin-bottom:10px">
-                <img src="http://placehold.it/100x100" style="width: 15%;  float: left; margin-right: 10px">
+                <img ng-src="{{getImage(p.Name)}}" style="width: 15%;  float: left; margin-right: 10px">
 
-                <span style="float: left">Product 1
-                    <br>2000 points</span>
+                <span style="float: left">{{p.Name}}
+                    <br>{{p.Price}} points</span>
 
-                <button class="button button-outline button-balanced icon ion-ios-cart" style="float: right"></button>
-
-
-                <div style="clear:both;"></div>
-            </div>
-        </div>
-        <div>
-            <div style="margin-bottom:10px">
-                <img src="http://placehold.it/100x100" style="width: 15%;  float: left; margin-right: 10px">
-                <span style="float: left">Product 1
-                    <br>2000 points</span>
-                <button class="button button-outline button-balanced icon ion-ios-cart" style="float: right"></button>
+                <button class="button button-outline button-balanced icon ion-ios-cart" style="float: right" ng-click="buyProduct(p.Name, p.Price)"></button>
 
 
                 <div style="clear:both;"></div>

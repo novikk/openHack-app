@@ -1,3 +1,17 @@
 <ion-view title="Profile" id="page5">
-    <ion-content padding="true" class="has-header"></ion-content>
+    <ion-content padding="true" class="has-header">
+      <div ng-repeat="p in products">
+          <div style="margin-bottom:10px">
+              <img ng-src="{{getImage(p.Name)}}" style="width: 15%;  float: left; margin-right: 10px">
+
+              <span style="float: left"><br>{{p.Name}}
+                  </span>
+
+              <button class="button button-outline button-balanced icon ion-eye" style="float: right" ng-click="showQR($index)"></button>
+              <div style="text-align: center" ng-show="qr[$index]"><br><br><br><img style="width: 50%;" src="img/qr.png" alt=""></div>
+
+              <div style="clear:both;"></div>
+          </div>
+      </div>
+    </ion-content>
 </ion-view>

@@ -2,17 +2,17 @@
     <ion-content padding="true" class="has-header">
         <form class="list">
             <label class="item item-select" name="sport_select">
-                <span class="input-label">Sport</span>
+                <span class="input-label" ng-model="info.tp">Sport</span>
                 <select>
-                    <option>Running</option>
-                    <option>Bike</option>
+                    <option value="foot">Running</option>
+                    <option value="bike">Bike</option>
                 </select>
             </label>
             <label class="item item-input" name="route_length">
                 <span class="input-label">Route length</span>
-                <input type="number" placeholder="10">
+                <input type="number" placeholder="10" ng-model="info.km">
             </label>
         </form>
-        <button id="newRoute-button1" class="button button-balanced  button-block">Give me a route!</button>
+        <button id="newRoute-button1" class="button button-balanced  button-block" ng-click="newRoute()">Give me a route!</button>
     </ion-content>
 </ion-view>
