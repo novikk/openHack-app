@@ -1,0 +1,19 @@
+<style>
+  #map { height: calc(100% - 90px); }
+</style>
+<ion-view title="Map" id="page2" ng-init="initMap()">
+    <ion-content padding="true" class="has-header">
+
+      <div class="bar bar-header bar-dark">
+        <h1 class="title"><b>Time</b> 00:00 - <b>Distance</b> 10km</h1>
+      </div>
+
+      <div id="map" style="margin-top: 40px; border-radius: 5px"></div>
+
+      <div class="button-bar" style="margin-top: 5px" ng-show="isTracking == true">
+        <a class="button button-dark">Pause</a>
+        <a class="button button-assertive" ng-click="stopTracking()">Stop</a>
+      </div>
+      <a style="margin-top: 5px;width:100%" class="button button-balanced" ng-show="isTracking == false" ng-click="startTracking()">Start</a>
+    </ion-content>
+</ion-view>
